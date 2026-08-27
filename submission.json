@@ -1,0 +1,12 @@
+{
+  "milestone": "final",
+  "team": "【组名或姓名】",
+  "members": ["【成员1】", "【成员2】", "【成员3】", "【成员4】"],
+  "repository_url": "【GitHub 仓库 URL，push 之后填】",
+  "run_command": "python train_candidate4.py",
+  "test_command": "python -m pytest tests/",
+  "report": "report.md",
+  "presentation": "presentation.pptx",
+  "presentation_minutes": 10,
+  "student_confirmed_no_secrets": false
+}

@@ -1,0 +1,1 @@
+majority=厨余垃圾 correct=1030 total=2417 accuracy=0.4261

@@ -1,0 +1,10 @@
+data\raw\dataset\其他垃圾_毛巾\img_毛巾_185.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_验孕棒\img_验孕棒_65.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_百洁布\img_百洁布_133.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_一次性杯\img_一次性杯子_87.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_湿纸巾\img_湿纸巾_67.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_湿纸巾\img_湿纸巾_42.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_胶带\img_胶带_31.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_验孕棒\img_验孕棒_157.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_毛巾\img_毛巾_94.jpeg  真值=其他垃圾  预测=其他垃圾
+data\raw\dataset\其他垃圾_验孕棒\img_验孕棒_196.jpeg  真值=其他垃圾  预测=其他垃圾

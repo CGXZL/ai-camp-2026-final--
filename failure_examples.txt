@@ -1,0 +1,10 @@
+data\raw\dataset\其他垃圾_胶带\img_胶带_182.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_湿纸巾\img_湿纸巾_72.jpeg  真值=其他垃圾  预测=可回收物
+data\raw\dataset\其他垃圾_眼镜\img_电视眼镜_2.jpeg  真值=其他垃圾  预测=可回收物
+data\raw\dataset\其他垃圾_一次性杯\img_一次性杯子_59.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_餐盒\img_餐盒_28.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_验孕棒\img_验孕棒_103.jpeg  真值=其他垃圾  预测=厨余垃圾
+data\raw\dataset\其他垃圾_胶带\img_胶带_164.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_胶带\img_胶带_27.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_眼镜\img_电视眼镜_13.jpeg  真值=其他垃圾  预测=有害垃圾
+data\raw\dataset\其他垃圾_胶带\img_胶带_143.jpeg  真值=其他垃圾  预测=可回收物
