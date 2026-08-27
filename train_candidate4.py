@@ -144,6 +144,10 @@ def main() -> int:
     with open("success_examples.txt", "w", encoding="utf-8") as f:
         for path, true, pred in successes[:10]:
             f.write(f"{path}  真值={idx2label[true]}  预测={idx2label[pred]}\n")
+
+    # 6) 保存训练好的模型，供 predict.py 做现场演示（不用重新训练）
+    torch.save(model.state_dict(), "model.pt")
+    print("已保存 model.pt")
     return 0
 
 

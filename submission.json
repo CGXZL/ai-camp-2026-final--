@@ -3,7 +3,7 @@
   "team": "懒得起名组",
   "members": ["高川石", "潘锐", "徐梓朔", "陈治名"],
   "repository_url": "https://github.com/CGXZL/ai-camp-2026-final--",
-  "run_command": "python train_candidate4.py",
+  "run_command": "python candidate_v2.py",
   "test_command": "python -m pytest tests/",
   "report": "report.md",
   "presentation": "presentation.pptx",

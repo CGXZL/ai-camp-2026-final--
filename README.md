@@ -20,12 +20,16 @@
 ```powershell
 python make_split.py          # 1) 固定 80/20 划分，生成 split.json
 python baseline4.py           # 2) 基线（多数类）
-python train_candidate4.py    # 3) 候选（CNN），约几分钟
+python train_candidate4.py    # 3) 候选一（小 CNN），约几分钟
+python candidate_v2.py        # 4) 候选二（迁移学习，最终候选），约几分钟，保存 model_v2.pt
+python predict.py 图片路径    # 5) 现场演示：预测一张新照片属于哪类
 ```
 
 预期输出：
 - `baseline4.py` → 准确率 **0.4261**
-- `train_candidate4.py` → 准确率 **0.6268**，并生成 `candidate_result.txt`、`failure_examples.txt`、`success_examples.txt`
+- `train_candidate4.py` → 准确率 **0.6268**
+- `candidate_v2.py` → 准确率 **0.8858**，并保存 `model_v2.pt`
+- `predict.py` → 打印照片的预测类别和置信度
 
 ## 测试
 
@@ -37,9 +41,9 @@ python -m pytest tests/
 
 ## 结果摘要
 
-- 基线 0.4261 vs 候选 0.6268（同一测试集 2417 张，候选高 +0.2007）
-- 每类准确率：厨余 0.85 / 其他 0.57 / 有害 0.49 / **可回收 0.39（最难）**
-- 关键发现：总准确率被多数类"厨余"拉高；可回收物最弱，204/666 被误判成其他垃圾 → 回收资源流失
+- 基线 0.4261 vs 候选一（小 CNN）0.6268 vs 候选二（迁移学习）**0.8858**（同一测试集 2417 张）
+- 每类准确率（候选二）：厨余 0.96 / 有害 0.89 / 其他 0.81 / 可回收 0.80
+- 关键发现：从零训练的小 CNN 中可回收物最弱（0.39）；迁移学习把每类准确率都大幅提升
 - 成功与失败案例见 `report.md`
 
 ## 限制
