@@ -48,6 +48,7 @@ def main() -> int:
 
     labels = sorted(split["TRAIN"].keys())
     label2idx = {name: i for i, name in enumerate(labels)}
+    idx2label = {i: name for i, name in enumerate(labels)}
     print("4 个类别:", labels)
 
     # 1) 预训练 ResNet18，去掉最后的分类层，当作特征提取器
@@ -127,9 +128,15 @@ def main() -> int:
         ok_cls = int(((preds == test_y) & (test_y == idx)).sum())
         print(f"  {cls}: {ok_cls}/{n_cls} = {ok_cls / n_cls:.4f}")
 
-    # 失败案例数（和候选一对比）
+    # 失败案例数 + 前 10 个真实失败（v2 版，供报告和 PPT 使用）
     n_fail = int((preds != test_y).sum())
     print(f"失败案例数：{n_fail}")
+    failures = [(test_paths[i], test_y[i].item(), preds[i].item())
+                for i in range(total) if preds[i].item() != test_y[i].item()]
+    with open("failure_examples_v2.txt", "w", encoding="utf-8") as f:
+        for path, true, pred in failures[:10]:
+            f.write(f"{path}  真值={idx2label[true]}  预测={idx2label[pred]}\n")
+    print("前 10 个失败已存 failure_examples_v2.txt")
 
     # 保存训练好的线性分类器，供 predict.py 现场演示（迁移学习版）
     torch.save(model.state_dict(), "model_v2.pt")
